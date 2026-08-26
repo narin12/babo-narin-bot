@@ -6,8 +6,8 @@ import { TitanBotError, ErrorTypes } from '../../utils/errorHandler.js';
 import { InteractionHelper } from '../../utils/interactionHelper.js';
 export default {
     data: new SlashCommandBuilder()
-    .setName("roll")
-    .setDescription("Rolls dice using standard notation (e.g., 2d20, 1d6 + 5).")
+    .setName("도박 돌리기")
+    .setDescription("주사위를 돌립니다! (e.g., 2d20, 1d6 + 5).")
     .addStringOption((option) =>
       option
         .setName("notation")
@@ -15,7 +15,7 @@ export default {
         .setRequired(true)
         .setMaxLength(50),
     ),
-  category: 'Fun',
+  category: '재미',
 
   async execute(interaction, config, client) {
     await InteractionHelper.safeDefer(interaction);
