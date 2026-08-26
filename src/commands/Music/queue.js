@@ -6,10 +6,10 @@ export default {
     slashOnly: true,
     category: 'Music',
     data: new SlashCommandBuilder()
-        .setName('queue')
+        .setName('대기열')
         .setDescription('Show the current music queue')
         .addIntegerOption((opt) =>
-            opt.setName('page').setDescription('Page number').setMinValue(1),
+            opt.setName('페이지').setDescription('page number').setMinValue(1),
         ),
 
     async execute(interaction, config, client) {
