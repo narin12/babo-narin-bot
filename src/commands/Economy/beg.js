@@ -47,7 +47,7 @@ export default {
                     "조금만 더 기다려주세요 돈이 없어요 ㅠㅠ",
                     ErrorTypes.RATE_LIMIT,
                     `You are tired from begging! Try again in **${timeMessage}**.`,
-                    { remainingTime, minutes, seconds, cooldownType: 'beg' }
+                    { remainingTime, minutes, seconds, cooldownType: '바보 나린이에게 구걸하기' }
                 );
             }
 
