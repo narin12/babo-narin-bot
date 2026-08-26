@@ -13,7 +13,7 @@ const SUCCESS_CHANCE = 0.7;
 export default {
     data: new SlashCommandBuilder()
         .setName('바보 나린이에게 구걸하기')
-        .setDescription('Beg for a small amount of money'),
+        .setDescription('바보 나린이에게 구걸을해서 돈이 생겼어요! -# 대신 빚도 생겼지만...'),
 
     execute: withErrorHandling(async (interaction, config, client) => {
         const deferred = await InteractionHelper.safeDefer(interaction);
