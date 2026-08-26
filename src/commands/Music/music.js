@@ -19,28 +19,28 @@ import {
 import { deferMusicCommand } from '../../services/music/prefixSupport.js';
 
 export default {
-    category: 'Music',
+    category: '음악',
     data: new SlashCommandBuilder()
-        .setName('music')
+        .setName('음악')
         .setDescription('Manage playback, queue, and voice session settings')
         .addSubcommand((sub) =>
-            sub.setName('pause').setDescription('Pause playback'),
+            sub.setName('정지').setDescription('Pause playback'),
         )
         .addSubcommand((sub) =>
-            sub.setName('resume').setDescription('Resume playback'),
+            sub.setName('다시 시작').setDescription('Resume playback'),
         )
         .addSubcommand((sub) =>
-            sub.setName('skip').setDescription('Skip the current track'),
+            sub.setName('건너뛰기').setDescription('Skip the current track'),
         )
         .addSubcommand((sub) =>
-            sub.setName('stop').setDescription('Stop playback and clear the queue'),
+            sub.setName('멈추기').setDescription('Stop playback and clear the queue'),
         )
         .addSubcommand((sub) =>
-            sub.setName('shuffle').setDescription('Shuffle the queue'),
+            sub.setName('대기열 섞기').setDescription('Shuffle the queue'),
         )
         .addSubcommand((sub) =>
             sub
-                .setName('loop')
+                .setName('반복')
                 .setDescription('Set loop mode')
                 .addStringOption((opt) =>
                     opt
@@ -56,7 +56,7 @@ export default {
         )
         .addSubcommand((sub) =>
             sub
-                .setName('volume')
+                .setName('불륨')
                 .setDescription('Set playback volume')
                 .addIntegerOption((opt) =>
                     opt.setName('level').setDescription('Volume (0-100)').setRequired(true).setMinValue(0).setMaxValue(100),
@@ -64,7 +64,7 @@ export default {
         )
         .addSubcommand((sub) =>
             sub
-                .setName('seek')
+                .setName('숨기기')
                 .setDescription('Seek to a position in the current track')
                 .addIntegerOption((opt) =>
                     opt.setName('seconds').setDescription('Position in seconds').setRequired(true).setMinValue(0),
@@ -72,7 +72,7 @@ export default {
         )
         .addSubcommand((sub) =>
             sub
-                .setName('remove')
+                .setName('삭제')
                 .setDescription('Remove a track from the queue')
                 .addIntegerOption((opt) =>
                     opt.setName('position').setDescription('Queue position').setRequired(true).setMinValue(1),
@@ -80,7 +80,7 @@ export default {
         )
         .addSubcommand((sub) =>
             sub
-                .setName('move')
+                .setName('이동')
                 .setDescription('Move a track in the queue')
                 .addIntegerOption((opt) =>
                     opt.setName('from').setDescription('Current position').setRequired(true).setMinValue(1),
@@ -90,10 +90,10 @@ export default {
                 ),
         )
         .addSubcommand((sub) =>
-            sub.setName('clear').setDescription('Clear the queue'),
+            sub.setName('대기열 비우기').setDescription('Clear the queue'),
         )
         .addSubcommand((sub) =>
-            sub.setName('leave').setDescription('Disconnect the bot from the voice channel'),
+            sub.setName('나가기!').setDescription('Disconnect the bot from the voice channel'),
         )
         .addSubcommand((sub) =>
             sub
