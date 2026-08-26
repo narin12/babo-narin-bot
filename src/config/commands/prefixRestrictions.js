@@ -4,11 +4,11 @@
 
 /** Top-level commands that cannot be invoked via prefix at all. */
 export const SLASH_ONLY_COMMANDS = new Set([
-  'configwizard',
+  '설정',
   'help',
-  'embedbuilder',
-  'wipedata',
-  'apply',
+  '임베드',
+  '데이터삭제',
+  '적용',
 ]);
 
 /** Subcommands blocked for every command when invoked via prefix. */
