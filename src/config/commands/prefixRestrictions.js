@@ -5,7 +5,7 @@
 /** Top-level commands that cannot be invoked via prefix at all. */
 export const SLASH_ONLY_COMMANDS = new Set([
   '설정',
-  'help',
+  '도움',
   '임베드',
   '데이터삭제',
   '적용',
