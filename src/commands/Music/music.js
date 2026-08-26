@@ -44,7 +44,7 @@ export default {
                 .setDescription('Set loop mode')
                 .addStringOption((opt) =>
                     opt
-                        .setName('mode')
+                        .setName('모드')
                         .setDescription('Loop mode')
                         .setRequired(true)
                         .addChoices(
