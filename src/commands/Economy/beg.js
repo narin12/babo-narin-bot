@@ -12,7 +12,7 @@ const SUCCESS_CHANCE = 0.7;
 
 export default {
     data: new SlashCommandBuilder()
-        .setName('beg')
+        .setName('바보 나린이에게 구걸하기')
         .setDescription('Beg for a small amount of money'),
 
     execute: withErrorHandling(async (interaction, config, client) => {
@@ -44,7 +44,7 @@ export default {
                     minutes > 0 ? `${minutes} minute(s)` : `${seconds} second(s)`;
 
                 throw createError(
-                    "Beg cooldown active",
+                    "조금만 더 기다려주세요 돈이 없어요 ㅠㅠ",
                     ErrorTypes.RATE_LIMIT,
                     `You are tired from begging! Try again in **${timeMessage}**.`,
                     { remainingTime, minutes, seconds, cooldownType: 'beg' }
@@ -70,7 +70,7 @@ export default {
                 ];
 
                 replyEmbed = successEmbed(
-                    'Begging Successful',
+                    '자 여기요! 대신 함부로 쓰지말아요! 함부로 쓰면 당신에게 바보나린의 빚이 생길테니까요!',
                     successMessages[
                         Math.floor(Math.random() * successMessages.length)
                     ]
@@ -95,5 +95,5 @@ userData.lastBeg = Date.now();
             await setEconomyData(client, guildId, userId, userData);
 
             await InteractionHelper.safeEditReply(interaction, { embeds: [replyEmbed] });
-    }, { command: 'beg' })
+    }, { command: '바보나린이에게 구걸하기!' })
 };
