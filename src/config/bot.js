@@ -15,12 +15,12 @@ export const botConfig = {
 
     // Activity lines shown under the bot name.
     // `type` number mapping from Discord:
-    // 0 = 웅나웅나
-    // 1 = Streaming
-    // 2 = Listening
-    // 3 = Watching
-    // 4 = Custom
-    // 5 = Competing
+    // 0 = babo
+    // 1 = babo
+    // 2 = babo
+    // 3 = babo
+    // 4 = babo
+    // 5 = babo
     activities: [
       {
         name: "Custom Status", // required by Discord API, not shown in the client
