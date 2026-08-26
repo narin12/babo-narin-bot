@@ -6,10 +6,10 @@ export default {
     slashOnly: true,
     category: 'Music',
     data: new SlashCommandBuilder()
-        .setName('play')
+        .setName('재생')
         .setDescription('Play a song or add it to the queue')
         .addStringOption((opt) =>
-            opt.setName('query').setDescription('Song name or URL').setRequired(true),
+            opt.setName('링크주세요 :>').setDescription('Song name or URL').setRequired(true),
         ),
 
     async execute(interaction, config, client) {
