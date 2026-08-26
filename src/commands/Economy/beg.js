@@ -26,9 +26,9 @@ export default {
             
             if (!userData) {
                 throw createError(
-                    "Failed to load economy data",
+                    "로딩하는데 실패했어요!",
                     ErrorTypes.DATABASE,
-                    "Failed to load your economy data. Please try again later.",
+                    "로딩하는데 실패했어요! 조금만 더 기다려주세요! (지갑 주섬주섬..)",
                     { userId, guildId }
                 );
             }
@@ -95,5 +95,5 @@ userData.lastBeg = Date.now();
             await setEconomyData(client, guildId, userId, userData);
 
             await InteractionHelper.safeEditReply(interaction, { embeds: [replyEmbed] });
-    }, { command: '바보나린이에게 구걸하기!' })
+    }, { command: '바보나린이에게 구걸하기' })
 };
